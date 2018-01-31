@@ -1,0 +1,58 @@
+@import "partials/params";
+@import "partials/mixins";
+
+
+#footer {
+    padding: 30px 0 40px;
+    background-color: @primary-color;
+
+    & .content {
+        display: flex;
+        justify-content:  space-between;
+        margin-bottom: 50px;
+
+        & .links {
+            display: flex;
+            width: 50%;
+
+            & ul {
+                .clean-list;
+                .footer-border;
+                width: 27%;
+                margin-right: 30px;
+
+                &.first-letter li:first-letter {
+                    font-weight: bold;
+                }
+
+                & li {
+                    line-height: 1.8;
+
+                    & a {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+
+
+        & .social {
+            .footer-border;
+            width: 10%;
+
+            & i {
+                cursor: pointer;
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    & .copyright {
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+}
